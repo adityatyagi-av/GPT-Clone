@@ -1,9 +1,9 @@
 import { Configuration, OpenAIApi } from "openai";
-import axios from "axios"
+// import axios from "axios"
 import './App.css'
 
 // Set the User-Agent header globally for Axios
-axios.defaults.headers.common["User-Agent"] = "Your User Agent";
+
 
 function App() {
  console.log(import.meta.env.VITE_OPENAI_API_KEY)
@@ -12,13 +12,12 @@ function App() {
     apiKey: import.meta.env.VITE_OPENAI_API_KEY,
     
 });
-
+//removing the "User-Agent header from the Configuration"
+delete configuration.baseOptions.headers['User-Agent'];
   const openai = new OpenAIApi(configuration);
   
   const generateImage = async ()=>{
     const response = await openai.createImage({
-      file: '<base64-encoded-image-file>',
-      // caption: 'Say this is a test', // Or use 'prompt' instead of 'caption' if appropriate
      
       prompt: "Say this is a test",
       n:1,
