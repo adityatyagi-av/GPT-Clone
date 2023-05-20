@@ -5,7 +5,7 @@ import './App.css'
 // Set the User-Agent header globally for Axios
 // console.log(import.meta.env.VITE_OPENAI_API_KEY)
 const configuration = new Configuration({
-  organization: "org-KpXswoSTFjlOOuA6nrewrYrm",
+  // organization: "org-KpXswoSTFjlOOuA6nrewrYrm",
   apiKey: import.meta.env.VITE_OPENAI_API_KEY,
   
 });
@@ -37,7 +37,7 @@ function App() {
         const response = await openai.createImage({
           prompt: "Say this is a test",
               n:1,
-              size:'512x512'   
+              size:'512x512', 
         })
         console.log(response.data.data[0].url)
       }

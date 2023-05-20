@@ -10,6 +10,6 @@ import Index from '.'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App/> 
-    {/* <Index/> */}
+    <Index/>
   </React.StrictMode>,
 )
