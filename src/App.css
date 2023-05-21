@@ -1,0 +1,27 @@
+*{
+    background-color: rgb(222, 215, 230);
+}
+.app-main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.app-input{
+    height: 2rem;
+    margin: 20px;
+    width: 450px;
+}
+.app-button{
+    height: 3rem;
+    width: 8rem;
+    background-color: rgb(162, 125, 214);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.image{
+    margin-top: 25px;
+    height: 405px;
+    width: 450px;
+    border-radius: 5px;
+}
